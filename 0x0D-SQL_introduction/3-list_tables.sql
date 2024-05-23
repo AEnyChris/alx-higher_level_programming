@@ -1,3 +1,3 @@
 -- list all the tables in a database
 
-SHOW FULL TABLES FROM test;
+SHOW FULL TABLES;
