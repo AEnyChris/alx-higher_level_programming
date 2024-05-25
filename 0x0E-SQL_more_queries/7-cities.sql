@@ -1,4 +1,4 @@
--- create database and table with auto generated and unique id--
+-- create database and table with auto generated and unique id
 -- cities description:
 -- 	  id INT unique, auto generated, can’t be null and is a primary key
 --	  state_id INT, can’t be null and must be a FOREIGN KEY that references to id of the states table
