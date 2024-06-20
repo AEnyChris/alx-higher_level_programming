@@ -8,7 +8,4 @@ module.exports = class Sqaure extends Rectangle {
   constructor (size) {
     super(size, size);
   }
-  double () {
-    super.double();
-  }
 };
