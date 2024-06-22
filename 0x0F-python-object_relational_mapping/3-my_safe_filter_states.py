@@ -7,6 +7,7 @@ import sys
 import MySQLdb
 import re
 
+
 def query_state(user, passwd, db, state_name):
     """queries the state table to return all states"""
     pattern = r'^[A-Z][a-z]+$'
