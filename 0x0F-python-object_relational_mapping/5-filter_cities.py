@@ -28,9 +28,7 @@ def query_state(user, passwd, db, state_name):
             ORDER BY cities.id ASC""".format(state_name))
 
         rows = cur.fetchall()
-        city_list = []
-        for row in rows:
-            city_list.append(row[0])
+        city_list = [row[0] for row in rows if rows is not None]
         print(", ".join(city_list))
 
         cur.close()
