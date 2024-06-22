@@ -18,7 +18,7 @@ def query_state(user, passwd, db):
     cur = db.cursor()
     cur.execute(
         """SELECT * FROM states
-        WHERE SUBSTRING(name, 1, 1) = 'N'
+        WHERE name LIKE BINARY 'N%'
         ORDER BY id ASC""")
 
     rows = cur.fetchall()
