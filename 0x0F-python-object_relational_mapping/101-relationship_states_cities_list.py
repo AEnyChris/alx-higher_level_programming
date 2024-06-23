@@ -18,9 +18,10 @@ if __name__ == "__main__":
     session = Session(engine)
 
     query_obj = session.query(State)\
-            .join(City)\
-            .order_by(State.id, City.id)\
-            .all()
+        .join(City)\
+        .order_by(State.id, City.id)\
+        .all()
+
     for instance in query_obj:
         print("{}: {}".format(instance.id, instance.name))
         for city in instance.cities:
