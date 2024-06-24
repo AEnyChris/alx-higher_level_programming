@@ -18,7 +18,7 @@ if __name__ == "__main__":
     session = Session(engine)
 
     query_obj = session.query(State)\
-        .join(City)\
+        .outerjoin(City)\
         .order_by(State.id, City.id)\
         .all()
 
