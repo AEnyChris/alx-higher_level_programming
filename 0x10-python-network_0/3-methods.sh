@@ -1,3 +1,3 @@
 #!/bin/bash
 # displays the allowed https methods
-curl -sI "$1" | grep "Allowed" | cut -c 8-
+curl -sI "$1" | grep "Allow" | cut -c 8-
