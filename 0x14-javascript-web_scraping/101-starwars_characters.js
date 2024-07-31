@@ -9,9 +9,9 @@ function getData (url) {
     request.get(url, (error, response, body) => {
       if (error) {
         reject(error);
-     } else {
+      } else {
         resolve(body);
-     }
+      }
     });
   });
 }
@@ -19,7 +19,7 @@ function getData (url) {
 async function printData () {
   try {
     const response = await getData(mainUrl);
-    function execPrint(response){
+    function execPrint (response) {
       const characters = JSON.parse(response).characters;
       const promises = [];
 
@@ -27,18 +27,18 @@ async function printData () {
         promises.push(getData(characters[i]));
       }
 
-     Promise.all(promises)
-       .then((output) => {
-         for (let j = 0; j < output.length; j++) {
-           console.log(JSON.parse(output[j]).name);
-	    }
-      });
-  }
-   execPrint(response);
-    }catch (error) {
+      Promise.all(promises)
+        .then((output) => {
+          for (let j = 0; j < output.length; j++) {
+            console.log(JSON.parse(output[j]).name);
+          }
+        });
+    }
+    execPrint(response);
+  } catch (error) {
     console.log(error);
-   }
- }
+  }
+}
 
 printData();
 
